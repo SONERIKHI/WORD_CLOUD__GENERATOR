@@ -2,14 +2,14 @@
 """
 Created on Sun May 28 13:33:07 2023
 
-@author: RUCHIR
+@author: sone
 """
 
 import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-st.image("ruchirr.jpeg")
+st.image("sone.jpeg")
 
 def generate_wordcloud(text):
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
