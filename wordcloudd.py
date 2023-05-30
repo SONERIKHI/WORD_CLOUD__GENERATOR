@@ -17,6 +17,7 @@ def generate_wordcloud(text):
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
+    plt.title(title) #Set the title of the word cloud
     plt.tight_layout(pad=0)
     st.pyplot()
 
@@ -25,6 +26,7 @@ def main():
     st.write("Enter your text below to generate a word cloud.")
     st.set_option('deprecation.showPyplotGlobalUse', False)
     text = st.text_area("Text")
+    title = st.text_input("Word Cloud Title")
 
     if st.button("Generate Word Cloud"):
         generate_wordcloud(text)
